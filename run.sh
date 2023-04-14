@@ -10,7 +10,7 @@ docker run --rm -it --name belabox-receiver \
    -v $PWD/config.json:/app/config.json belabox-receiver
 
 # SLS stats page:
-# http://localhost:8181/stats
+# http://localhost:5011/stats
 #
 # Belabox
 # host: <ip>
@@ -18,5 +18,5 @@ docker run --rm -it --name belabox-receiver \
 # stream-id: live/stream/belabox
 #
 # OBS MediaSource:
-# srt://<ip>:8282/?streamid=play/stream/belabox
+# srt://<ip>:5010/?streamid=play/stream/belabox
 #

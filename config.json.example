@@ -14,7 +14,7 @@
   },
   "rtmp": {
     "server": "srt-live-server",
-    "stats": "http://127.0.0.1:8181/stats",
+    "stats": "http://127.0.0.1:5011/stats",
     "publisher": "live/stream/belabox"
   },
   "twitchChat": {

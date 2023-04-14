@@ -91,13 +91,13 @@ RUN set -xe; \
     ldconfig; \
     chmod 755 /usr/local/bin/logprefix;
 
-ARG NOALBS_VERSION=v1.9.5
-RUN set -xe; \
-    git clone https://github.com/715209/nginx-obs-automatic-low-bitrate-switching /app; \
-    cd /app; \
-    git checkout $NOALBS_VERSION; \
-    npm install fast-fuzzy node-fetch node-media-server obs-websocket-js signale string-template ws xml2js;
+#ARG NOALBS_VERSION=v1.9.5
+#RUN set -xe; \
+#    git clone https://github.com/715209/nginx-obs-automatic-low-bitrate-switching /app; \
+#    cd /app; \
+#    git checkout $NOALBS_VERSION; \
+#    npm install fast-fuzzy node-fetch node-media-server obs-websocket-js signale string-template ws xml2js;
 
-EXPOSE 5000/udp 8181/tcp 8282/udp
+EXPOSE 5000/udp 5011/tcp 5010/udp
 
 CMD ["/usr/bin/supervisord"]

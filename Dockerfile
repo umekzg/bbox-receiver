@@ -21,7 +21,7 @@ RUN set -xe; \
 ARG BELABOX_SRT_VERSION=master
 RUN set -xe; \
     mkdir -p /build; \
-    git clone https://github.com/BELABOX/srt.git /build/srt; \
+    git clone https://github.com/umekzg/srt_bb.git /build/srt; \
     cd /build/srt; \
     git checkout $BELABOX_SRT_VERSION; \
     ./configure --prefix=/usr/local; \
@@ -34,7 +34,7 @@ RUN set -xe; \
 ARG SRTLA_VERSION=main
 RUN set -xe; \
     mkdir -p /build; \
-    git clone https://github.com/BELABOX/srtla.git /build/srtla; \
+    git clone https://github.com/umekzg/srtla_bb.git /build/srtla; \
     cd /build/srtla; \
     git checkout $SRTLA_VERSION; \
     make -j4;
@@ -53,7 +53,7 @@ COPY patches/sls-SRTLA.patch \
 ARG SRT_LIVE_SERVER_VERSION=master
 RUN set -xe; \
     mkdir -p /build; \
-    git clone https://github.com/IRLDeck/srt-live-server.git /build/srt-live-server; \
+    git clone https://github.com/umekzg/srt-live-server_bb.git /build/srt-live-server; \
     cd /build/srt-live-server; \
     git checkout $SRT_LIVE_SERVER_VERSION; \
     patch -p1 < /tmp/sls-SRTLA.patch; \
